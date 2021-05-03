@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>테이블 연습</title>
+    <!-- table -> tr -> td태그의 순서 -->
+    <style>
+        /*여러 태그를 동시에 지정할 때는 , 로 연결함*/
+        table,tr,td,th{
+            border: 2px solid turquoise;
+            border-collapse:collapse;
+            padding: 15px;
+            /* padding: 테이블 좌우위아래에 공백을 주는 옵션 */
+
+           
+            /* table{
+                border: 1px solid red;
+            }
+            tr,td{
+                border: 1px solid black;
+            } */
+
+            }
+            td{
+            text-align:center; 
+            /* 글자 정렬 :centre, right, left 등등..*/ 
+            }
+            tr:nth-child(even){
+                background-color:rgb(201, 141, 117);
+            }
+            /* 테이블 안에서 줄마다 색깔 구분할때 (even 짝수) */
+
+
+            tr:nth-child(odd){
+                background-color: thistle;
+            }
+            /* 테이블 안에서 줄마다 색깔 구분할때 (odd 홀수) */
+
+    </style>
+</head>
+<body>
+    <!-- 테이블 태그 -->
+    <table>
+        <tr>  <!-- 새로운 행(가로줄) 추가-->
+             
+            <td>1</td>  <!-- 새로운 열(세로) 추가-->
+            <td>2</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+
+        </tr>
+        <tr>
+            <td>7</td>
+
+        </tr>
+        <tr>
+            <td>8</td>
+        </tr>
+
+    </table>
+    <br>
+    <table border="1">
+        <caption> 학생정보</caption>
+        <!-- 문서 제목을 다룰때(표제목) -->
+        <tr>
+            <th>이름</th>
+            <th>이메일주소</th>
+            <th>전화번호</th>
+            <!-- th를 사용하면 해당 space를 글자는 굵게, 가운데 정렬로 바꿔줌 -->
+        </tr>
+        <tr>
+            <td>학생1</td>
+            <td>aa@aa</td>
+            <td>010-1111-1111</td>
+        </tr>
+        <tr>
+            <td>학생2</td>
+            <td>bb@bb</td>
+            <td>010-2222-2222</td>
+        </tr>
+        <tr>
+            <td>학생3</td>
+            <td>cc@cc</td>
+            <td>010-3333-3333</td>
+        </tr>
+        <tr>
+            <td colspan="2">학생4</td>
+            <!-- colspan이라는 값을 주면 숫자를 주는 만큼 옆 칸을 차지함 (엑셀 셀통합 같은 기능)-->
+            <td rowspan="2">dd@dd</td>
+            <!-- rowspan이라는 값을 주면 숫자를 주는 만큼 아래칸을 차지함 (엑셀 셀통합 같은 기능)-->
+            <!-- 단 colspan도 rowspan도 이미 지정한 테이블값을 넘어가지는 않음, <td>로 내용 추가는 계속 가능 -->
+            <td>010-4444-4444</td>
+        </tr>
+        <tr>
+            <td>학생5</td>
+        </tr>
+        
+    </table>
+    
+</body>
+</html>
