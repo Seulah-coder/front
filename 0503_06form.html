@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 폼태그에서 작성한 값을 전송
+        action 속성 : form태그에서 작성한 값을 전송할 목적지
+                    : 보통은 백엔드에서 지정한 주소값을 사용함 
+        method 속성 : 백엔드로 데이터를 전송하는 방법(GET/POST)
+                get : 보내는 데이터가 주소에 노출됨.    -->
+    <form action="today" method="GET">
+        아이디: <input type="text" name="var1"><br>
+        비밀번호: <input type="password" name="var2"><br>
+        이메일: <input type="text" name="var3"><br>
+        <input type="submit" value="가입">
+        <!-- submit의 역할: form태그에 작성한 내용을 전부 action 속성값으로 전달 -->
+    </form>
+    http://127.0.0.1:5500/join?id=aa&password=aa
+    <!-- 가입 버튼을 클릭했더니 -->
+    <!-- get으로 전송하는 방식 : 목적지 주소값과 보내는 데이터가 모두 보임(비밀번호 등 보이면 안되는 데이터는 get으로 전송하면 안됨)-->
+    join?id=aa&password=aa 
+    today?id=입력값1&password=1234
+    today?id=입력값1&password=1234&var3=rser%40hanmail.net
+    <!-- 위 상태로 backend로 가야함 / 항목이 늘어나면 해당 항목이 &가 붙어서 늘어남 -->
+
+    <!-- post로 전송하는 경우 : 목적지 주소값만 보임 -->
+    http://127.0.0.1:5500/today
+    today
+    <!-- 다음에서 날씨라고 검색했을때 뜨는 주소 분석 -->
+    https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&sq=&o=&q=날씨
+    <input type="text" class="tf_keyword" id="q" name="q" title="검색어 입력" value="날씨" autocomplete="off" spellcheck="false" maxlength="255" data-bind="value: keywordInput.searchQuery, hasFocus: keywordInput.isSelected, event: { keydown: onKeyDown, keyup: onKeyUp, focus: onFocus, blur: onBlur }">
+
+</body>
+</html>
