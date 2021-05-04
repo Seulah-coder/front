@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 등록</title>
+</head>
+
+<body>
+    <form action="boardwrite" method="post">
+        제목 : <input type="text" name="btitle" value="제목입니다." readonly> <br>
+        <!-- input에도 value를 줘서 글자를 표기하는게 가능하며 placeholder와는 다름
+            (placeholder는 데이터를 입력하면 사라짐) input value는 글 수정할때 사용-->
+        
+        <!-- readonly를 쓰면 text box에 쓰는것이 불가능함, 제약을 둘 수 있음-->
+        작성자 : <input type="text" name="bwriter" placeholder="작성자"> <br>
+        비밀번호: <input type="password" name = "bpassword"><br>
+        내용: <textarea name="bcontents" rows="10" cols="40"></textarea><br>
+        카테고리 선택: <select name = "bcategory">
+            <option value="study"> 공부 </option>
+            <option value="travel"> 여행 </option>
+            <option value="hobby"> 취미 </option>
+          </select> <br>
+        전체공개 여부: 예 <input type="radio" name= "bopen" value="y">
+        아니오 <input type="radio" name= "bopen" value="n"><br>
+          
+        <input type="submit" value="글 작성">
+        <!-- form태그 내에 있는 button태그는 submit의 역할을 함 -->
+        <button>글 작성버튼</button>
+    </form>
+</body>
+</html>

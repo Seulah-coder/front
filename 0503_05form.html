@@ -7,9 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- form 태그 -->
+    <!-- form 태그 : 회원가입, 로그인,글쓰기,수정,검색
+                    전송하는 것이 목적. 어디로? 서버(백앤드)-->
     <form>
         <!-- input태그를 사용하며 속성이 중요(type) -->
+        <!-- name속성값에 입력한 데이터가 담겨서 서버로 전달됨.
+            입력창에 날씨라고 입력했다면 'name1 = 날씨' 형태로 백엔드로 전달됨 -->
         <input type = "text" id="id1" name="name1">
         <br>
         <input type =
@@ -43,7 +46,7 @@
                     <label for="male">남</label>
                     <input type="radio" name = "gender" value="female"> 
                     <label for="female">여</label>
-                    <!-- 중요! name값이 똑같아야함, name값이 다르면 다른 변수로 취급,또한 value속성을 반드시 줘서 백엔드로 결과를 전달해야함 -->
+                    <!-- 중요! radio는 name값이 똑같아야함, name값이 다르면 다른 변수로 취급,또한 value속성을 반드시 줘서 백엔드로 결과를 전달해야함 -->
               <!-- UI(User Interface): 디자인
                     UX(User experience) : 사용성 -->
                 <br>
@@ -53,6 +56,7 @@
               <input type="checkbox" name="lang" value="html"> html
               <input type="checkbox" name="lang" value="js"> Javascript
               <!-- checkbok에서 name은 똑같이, value값 각자 지정 필요 -->
+              <!-- radio는 하나만 체크할 경우, checkbok는 중복체크 할 경우 사용 -->
               <br>
               생일
               <input type="date" name="birth">
