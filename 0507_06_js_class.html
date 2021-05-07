@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            //클래스 요소 접근
+
+            var ele = document.getElementsByClassName('class1');
+            //class 1요소를 다가져옴
+            console.log(ele[0]);
+            //들어가는 정보가 여러개이다보니 알아서 배열이 됨
+            console.log(ele[1]);
+            //class1 내용 두번째가 출력
+            // console.log(ele[2]); -> undefined
+            
+            var ele1 = document.getElementsByClassName('class1');
+            console.log(ele1[0].innerHTML);
+            console.log(ele1[1].innerHTML);
+
+            ele1[0].innerHTML = '첫번째 클래스 내용 변경';
+
+            //태그 요소 접근
+            var ele2 = document.getElementsByTagName('div'); //괄호에 접근할 태그 명
+            console.log(ele2);
+            console.log(ele2[0]);
+            console.log(ele2[1]);
+        }
+    </script>
+</head>
+<body>
+    <button onclick = "test1()">함수호출</button>
+    <div class="class1">
+        class1 내용
+    </div>
+    <div class="class1">
+        class1 내용 두번째
+    </div>
+</body>
+</html>

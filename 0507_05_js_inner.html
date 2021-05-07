@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            // body의 id요소에 접근
+            // 현재문서(document)에 있는 id1이라는 id를
+            // 가진 요소를 사용
+            console.log(document.getElementById('id1'));
+            console.log(document.getElementById('id1').innerHTML); //innerHTML: 태그 내부에 접근
+            //위 문장과 아래 문장은 같다.
+            var ele = document.getElementById('id1');
+            console.log(ele);
+            console.log(ele.innerHTML);
+
+            var ele1 = document.getElementById('id1').innerHTML; //함수로도 지정해서 사용가능
+            console.log(ele1);
+
+            //id1 부분의 내용을 변경
+            document.getElementById('id1').innerHTML = '바뀌는 내용';
+            console.log(ele1);
+        }
+        // id로 접근하거나 class, tag로 접근
+    </script>
+</head>
+<body>
+    <button onclick="test1()">함수호출</button>
+    <div id="id1">
+        id1 영역 
+        // innerhtml이 영향을 미치는 부분
+    </div>
+    
+</body>
+</html>
