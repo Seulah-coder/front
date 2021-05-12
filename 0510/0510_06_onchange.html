@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            console.log('test1함수 호출');
+            var ele = document.getElementById('hobby');
+            console.log(ele.value);
+            document.getElementById('id2').innerHTML=ele.value; //select박스에서 선택한 결과물을 id2 space에 띄워줌
+        }
+    </script>
+</head>
+<body>
+    <!-- 아무거나 4가지 선택지가 있는 select박스 -->
+    <select id = "hobby" onchange="test1()">
+        <option selected> select your hobby</option>
+        <option value="travel"> travel</option>
+        <option value="game"> game</option>
+        <option value="reading"> reading</option>
+        <option value="drawing"> drawing</option>
+    </select>
+    <h2 id="id2"></h2>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border: 2px solid black;
+            border-collapse:collapse;
+            text-align: right;
+        
+            }
+        
+        td{
+            width: 30px;
+        }
+  
+            tr:nth-child(even){
+                background-color: beige
+            }
+
+
+            tr:nth-child(odd){
+                background-color: lightcoral;
+            }
+
+    </style>
+    </style>
+    <script>
+        function test1(){
+            var table = "<table align = border = 1>";
+            for(var i=2; i<10; i++){
+                table += "<tr>";
+                table += "<td>" +i+"단</td>";
+                for(var j=1; j<10; j++){
+                    table += "<td>" + i*j + "</td>";
+                                 
+
+                }
+                table += "</tr>";
+              
+                       
+            }
+
+         
+            table +="</table>";
+            document.getElementById('result').innerHTML=table;
+
+        }
+
+    </script>
+</head>
+<body>
+
+    <button onclick="test1()">구구단출력</button><br>
+    <div id="result"> </div>
+    
+    
+</body>
+</html>

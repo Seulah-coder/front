@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function test1(){
+            console.log('test1 함수호출');
+        }
+
+        function test2(){
+            console.log('test2 함수호출');
+            document.getElementById('id2').style.backgroundColor='green';
+        }
+
+        function test3(){
+            console.log('test3 함수호출');
+            document.getElementById('id3').style.color='red';
+        }
+
+        function test4(){
+            console.log('test4 함수호출');
+            document.getElementById('id3').style.color='blue';
+        }
+
+       
+        function test5( ){
+            var ele = document.getElementById('id4');
+            ele.style.border = '5px red solid';
+        }
+        function test6(){
+            var ele = document.getElementById('id4');
+            ele.style.border = '5px blue solid';
+        }
+
+    </script>
+    <style>
+        #id4{
+            background-color: bisque;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p id="id1" onclick="test1()">내용1</p>
+    <!-- 내용1을 클릭하면 함수 호출 -->
+    <p id="id2" ondblclick="test2()">내용2</p>
+    <!-- 내용2를 더블클릭하면 함수 호출 -->
+    <p id="id3" onmousedown="test3()" onmouseup="test4()">내용3</p>
+    <!-- onmousedown: 마우스를 누르고 있을때 실행 / onmouseup:마우스를 눌렀다 떼었을때 실행됨 -->
+    <div id="id4" onmouseover="test5()" onmouseout="test6()">
+    <!-- onmouseover:  moved onto the element : 포인터가 element안에 있을때 실행-->
+    <!-- onmouseoutL moved out the element: 포인터가 element밖에 있을때 실행 -->
+    </div>
+    
+</body>
+</html>
